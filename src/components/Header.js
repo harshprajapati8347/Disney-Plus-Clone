@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import HeaderNavMenu from "./HeaderNavMenu";
 
 const Header = () => {
   return (
@@ -7,30 +8,26 @@ const Header = () => {
       <Nav>
         <Logo src="/images/logo.svg"></Logo>
         <NavMenu>
-          <a>
-            <img src="/images/home-icon.svg" alt="home-icon" />
-            <span>HOME</span>
-          </a>
-
-          <a>
-            <img src="/images/watchlist-icon.svg" alt="home-icon" />
-            <span>WATCHLIST</span>
-          </a>
-
-          <a>
-            <img src="/images/home-icon.svg" alt="original-icon" />
-            <span>ORIGINALS</span>
-          </a>
-
-          <a>
-            <img src="/images/movie-icon.svg" alt="home-icon" />
-            <span>MOVIES</span>
-          </a>
-
-          <a>
-            <img src="/images/series-icon.svg" alt="home-icon" />
-            <span>SERIES</span>
-          </a>
+          <HeaderNavMenu
+            img="/images/home-icon.svg"
+            span="HOME"
+          ></HeaderNavMenu>
+          <HeaderNavMenu
+            img="/images/watchlist-icon.svg"
+            span="WATCHLIST"
+          ></HeaderNavMenu>
+          <HeaderNavMenu
+            img="/images/original-icon.svg"
+            span="ORIGINALS"
+          ></HeaderNavMenu>
+          <HeaderNavMenu
+            img="/images/movie-icon.svg"
+            span="MOVIE"
+          ></HeaderNavMenu>
+          <HeaderNavMenu
+            img="/images/series-icon.svg"
+            span="SERIES"
+          ></HeaderNavMenu>
         </NavMenu>
 
         <UserImg src="/images/dp.jpg" />
@@ -38,7 +35,7 @@ const Header = () => {
     </>
   );
 };
-// 36 27
+// 1 16 16
 export default Header;
 
 const Nav = styled.nav`
@@ -47,6 +44,7 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   padding: 0 36px;
+  overflow-x: hidden;
 `;
 
 const Logo = styled.img`

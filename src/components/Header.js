@@ -35,7 +35,7 @@ const Header = () => {
     </>
   );
 };
-// 1 16 16
+
 export default Header;
 
 const Nav = styled.nav`

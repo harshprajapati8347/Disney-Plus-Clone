@@ -1,37 +1,24 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { selectMovies } from "../features/movie/movieSlice";
 
 const Movies = () => {
+  const movies = useSelector(selectMovies);
+
+  console.log("This are movies", movies);
+
   return (
     <>
       <Container>
         <h4>Recommended for You</h4>
         <Content>
-          <Wrap>
-            <img src="/images/viewers-marvel.png" alt="movies" />
-          </Wrap>
-          <Wrap>
-            <img src="/images/viewers-marvel.png" alt="movies" />
-          </Wrap>
-          <Wrap>
-            <img src="/images/viewers-marvel.png" alt="movies" />
-          </Wrap>
-          <Wrap>
-            <img src="/images/viewers-marvel.png" alt="movies" />
-          </Wrap>
-          <Wrap>
-            <img src="/images/viewers-marvel.png" alt="movies" />
-          </Wrap>
-          <Wrap>
-            <img src="/images/viewers-marvel.png" alt="movies" />
-          </Wrap>
-          <Wrap>
-            <img src="/images/viewers-marvel.png" alt="movies" />
-          </Wrap>
-          <Wrap>
-            <img src="/images/viewers-marvel.png" alt="movies" />
-          </Wrap>
-          
+          {movies &&
+            movies.map((movie) => (
+              <Wrap key={movie.id}>
+                <img src={movie.cardImg} alt="movies" />
+              </Wrap>
+            ))}
         </Content>
       </Container>
     </>
@@ -51,7 +38,7 @@ const Content = styled.div`
 const Wrap = styled.div`
   border-radius: 10px;
   overflow: hidden;
-  cursor:pointer;
+  cursor: pointer;
   border: 3px solid rgba(249, 249 249, 0.1);
   box-shadow: rgb(0 0 0 /69%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;

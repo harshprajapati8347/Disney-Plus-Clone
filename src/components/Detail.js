@@ -20,7 +20,7 @@ const Detail = () => {
           // redirect to home page
         }
       });
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -28,7 +28,7 @@ const Detail = () => {
         {movie && (
           <>
             <Background>
-              <img src={movie.backgroundImg} alt="Background  Details"></img>
+              <img src={movie.backgroundImg} alt="Background Details"></img>
             </Background>
             <ImageTitle>
               <img src={movie.titleImg} alt="title Details" />

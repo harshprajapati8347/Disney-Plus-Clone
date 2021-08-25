@@ -62,39 +62,35 @@ const Header = () => {
   return (
     <Nav>
       <Logo src="/images/logo.svg"></Logo>
-      {!userName ? (
+      {/* {!userName ? (
         <>
           <LoginContainer>
             <Login onClick={signIn}>Login</Login>
           </LoginContainer>
         </>
-      ) : (
-        <>
-          <NavMenu>
-            <HeaderNavMenu
-              img="/images/home-icon.svg"
-              span="HOME"
-            ></HeaderNavMenu>
-            <HeaderNavMenu
-              img="/images/watchlist-icon.svg"
-              span="WATCHLIST"
-            ></HeaderNavMenu>
-            <HeaderNavMenu
-              img="/images/original-icon.svg"
-              span="ORIGINALS"
-            ></HeaderNavMenu>
-            <HeaderNavMenu
-              img="/images/movie-icon.svg"
-              span="MOVIE"
-            ></HeaderNavMenu>
-            <HeaderNavMenu
-              img="/images/series-icon.svg"
-              span="SERIES"
-            ></HeaderNavMenu>
-          </NavMenu>
-          <UserImg onClick={signOut} src="/images/dp.jpg" />
-        </>
-      )}
+      ) : ( */}
+      <NavMenu>
+        <HeaderNavMenu img="/images/home-icon.svg" span="HOME"></HeaderNavMenu>
+        <HeaderNavMenu
+          img="/images/watchlist-icon.svg"
+          span="WATCHLIST"
+        ></HeaderNavMenu>
+        <HeaderNavMenu
+          img="/images/original-icon.svg"
+          span="ORIGINALS"
+        ></HeaderNavMenu>
+        <HeaderNavMenu
+          img="/images/movie-icon.svg"
+          span="MOVIE"
+        ></HeaderNavMenu>
+        <HeaderNavMenu
+          img="/images/series-icon.svg"
+          span="SERIES"
+        ></HeaderNavMenu>
+      </NavMenu>
+      <UserImg src="/images/dp.png" />
+      {/* onClick={signOut} */}
+      {/* )} */}
     </Nav>
   );
 };

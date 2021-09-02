@@ -17,13 +17,14 @@ const ImgSlider = () => {
     <>
       <Carousel {...settings}>
         <Wrap>
-          <img src="/images/slider-badging.jpg" alt="slider"></img>
+          <img src="/images/slider-scale.jpg" alt="slider"></img>
         </Wrap>
         <Wrap>
           <img src="/images/slider-badag.jpg" alt="slider"></img>
         </Wrap>
+
         <Wrap>
-          <img src="/images/slider-scale.jpg" alt="slider"></img>
+          <img src="/images/slider-badging.jpg" alt="slider"></img>
         </Wrap>
         <Wrap>
           <img src="/images/slider-scales.jpg" alt="slider"></img>

@@ -61,7 +61,7 @@ const Header = () => {
 
   return (
     <Nav>
-      <Logo src="/images/logo.svg"></Logo>
+      <Logo src="/images/logo.svg" href="/"></Logo>
       {/* {!userName ? (
         <>
           <LoginContainer>
@@ -108,6 +108,7 @@ const Nav = styled.nav`
 
 const Logo = styled.img`
   width: 80px;
+  cursor: pointer;
 `;
 
 const NavMenu = styled.div`
